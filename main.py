@@ -90,7 +90,7 @@ def display(text: list, letters: dict, height: int, style: dict):
     :param style: dictionary containing styles options
     :type style: dict
     """
-    letter_spacing = style["letter_spacing"]
+    letter_spacing = style["spacing"]
     for line in text:
         for i in range(height):
             for letter in line:
@@ -130,8 +130,8 @@ def parse_args():
         type=str,
     )
     parser.add_argument(
-        "--letter_spacing",
-        "-ls",
+        "--spacing",
+        "-s",
         required=False,
         default=1,
         type=int,
